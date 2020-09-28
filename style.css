@@ -5,3 +5,180 @@
     list-style: none;
     text-decoration: none;
 }
+::-webkit-scrollbar{
+    display: none;
+}
+body{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* #region minuteMarks */
+    .minuteMarksWrapper{
+        position: absolute;
+        margin: 0 calc(50% - 2.5px);
+        transform-origin: 50% 100%;
+        height: 50%;
+    }
+    .minuteMark{
+        display: block;
+        height: 20px;
+        width: 5px;
+        background-color: rgb(50, 50, 50);
+    }
+    /* #region singleMinuteMarks */
+        #minuteMark5{
+            transform: rotate(30deg);
+        }
+        #minuteMark10{
+            transform: rotate(60deg);
+        }
+        #minuteMark20{
+            transform: rotate(120deg);
+        }
+        #minuteMark25{
+            transform: rotate(150deg);
+        }
+        #minuteMark35{
+            transform: rotate(210deg);
+        }
+        #minuteMark40{
+            transform: rotate(240deg);
+        }
+        #minuteMark50{
+            transform: rotate(300deg);
+        }
+        #minuteMark55{
+            transform: rotate(330deg);
+        }
+    /* #endregion singleMinuteMarks */
+    
+    /* #endregion minuteMarks */
+
+/* #region hourMark */
+.hourMarkWrapper{
+    position: absolute;
+    margin: 0 calc(50% - 3.5px);
+    transform-origin: 50% 100%;
+    height: 50%;
+}
+.hourMark{
+    display: block;
+    height: 40px;
+    width: 7px;
+    background-color: black;
+}
+
+/* #region singleHourMark */
+#hourMark3{
+    transform: rotate(90deg);
+}
+#hourMark6{
+    transform: rotate(180deg);
+}
+#hourMark9{
+    transform: rotate(270deg);
+}
+
+/* #endregion singleHourMark */
+
+/* #endregion hourMark */
+
+
+
+/* #region counters */
+
+    /* #region secondCounter */
+        .secondCounterWrapper{
+            position: absolute;
+            margin: 0 calc(50% - 2px);
+            transform-origin: 50% 100%;
+            height: 50%;
+            transform: rotate(50deg);
+            display: flex;
+            align-items: flex-end;
+
+        }
+        .secondCounter{
+            display: block;
+            height: 90%;
+            width: 4px;
+            background-color: red;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+            
+        }
+    /* #endregion secondCounter */
+
+    /* #region minuteCounter */
+
+        .minuteCounterWrapper{
+            position: absolute;
+            margin: 0 calc(50% - 3.5px);
+            transform-origin: 50% 100%;
+            height: 50%;
+            transform: rotate(50deg);
+            display: flex;
+            align-items: flex-end;
+
+        }
+        .minuteCounter{
+            display: block;
+            height: 70%;
+            width: 7px;
+            background-color: black;
+            border-top-left-radius: 3.5px;
+            border-top-right-radius: 3.5px;
+            
+        }
+
+    /* #endregion minuteCounter */
+
+    /* #region hourCounter */
+        .hourCounterWrapper{
+            position: absolute;
+            margin: 0 calc(50% - 5px);
+            transform-origin: 50% 100%;
+            height: 50%;
+            transform: rotate(227deg);
+            display: flex;
+            align-items: flex-end;
+
+        }
+        .hourCounter{
+            display: block;
+            height: 50%;
+            width: 10px;
+            background-color: black;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+    /* #endregion hourCounter */
+/* #endregion counters */
+
+
+
+.watchContainer{
+    position: relative;
+    border-radius: 50%;
+    height: 302px;
+    width: 302px;
+    border: black solid 15px;
+    overflow: hidden;
+    background-color: rgb(100, 100, 100);
+}
+.watchContainer::after{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    margin: calc(50% - 8px) calc(50% - 8px);
+    height: 16px;
+    width: 16px;
+    overflow: hidden;
+    background-color: black;
+}
